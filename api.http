@@ -1,0 +1,40 @@
+### Recuperar todas las películas
+GET http://localhost:3000/movies
+
+### Recuperar una película por id
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+### Recuperar películas por un género
+GET http://localhost:3000/movies?genre=fantasy
+
+### Crear una película
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Hijo del diablo",
+    "year": 2019,
+    "director": "William Ortega",
+    "duration": 154,
+    "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+    "genre": [
+      "Action",
+      "Fantasy"
+    ],
+    "rate": 6.8
+}
+
+### Actualizar una película
+PATCH http://localhost:3000/movies/93aaf011-9e8f-41dc-8045-29be0a766c24
+Content-Type: application/json
+
+{
+    "title": "Hijo del diablo 2",
+    "year": 2018,
+    "director": "William Ortega",
+    "duration": 180,
+    "rate": 5.8
+}
+
+### Eliminar una película
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3

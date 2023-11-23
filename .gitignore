@@ -1,0 +1,4 @@
+## Ignorar módulos de node
+node_modules
+.env
+package-lock.json
